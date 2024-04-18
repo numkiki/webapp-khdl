@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+/* index */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container .title {
+    font-size: 30px;
+    margin: 20px 0px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 0px 10px 5%;
+    border-radius: 8px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.container input::placeholder {
+    left: 5%;
+}
+
+.container .search-bar {
+    position: relative;
+}
+
+.container .search-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.container .price-range .search-item {
+    display: inline-block;
+    width: calc(50% - 2px);
+}
+
+.container .price-range input[type="text"] {
+    padding: 10px 0px 10px 10%;
+}
+
+.container .price-range input::placeholder {
+    left: 10%;
+}
+
+.container .material-icons {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container .error-no-info {
+    width: 50%;
+    color: red;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: #FFE4C9;
+    padding: 16px 0 16px 16px;
+}
+
+button {
+    width: 10%;
+    padding: 10px 20px;
+    background-color: #77B0AA;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+    text-align: center;
+}
+
+button:hover {
+    width: 15%;
+    background-color: #003C43;
+}
+
+.product-show, tr, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Results */
+
+.container .return-prev {
+    margin: 20px 0px;
+    display: block;
+    text-decoration:underline;
+}
+
+.container .return-prev:hover {
+    color: #77B0AA;
+}
+
+.container .search-results {
+    margin-top: 20px;
+}
+
+.container .item-nothing {
+    text-align: center;
+}
