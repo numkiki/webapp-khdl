@@ -22,6 +22,7 @@
             <th>Memory (GB)</th>
             <th>Price</th>
             <th>Store</th>
+            <th>Score</th>
             <th>Link</th>
         </tr> 
 
@@ -33,13 +34,14 @@
                 <td>{{ product.memory }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.distributor }}</td>
+                <td>{{ product.sentiment_score }}</td>
                 <td><a href="{{ product.Link }}">Link to the product</a></td>                 
             </tr>
         {% endfor %}
 
         {% else %}
             <tr class="error-msg">
-                <td colspan="6" class="error-no-info">{{ error_message }}</td>
+                <td colspan="7" class="error-no-info">{{ error_message }}</td>
             </tr>
         {% endif %}
 

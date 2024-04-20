@@ -58,13 +58,16 @@ input[type="text"] {
     transform: translateY(-50%);
 }
 
-.container .error-no-info {
-    width: 50%;
-    color: red;
-    font-size: 20px;
-    margin-top: 20px;
-    background-color: #FFE4C9;
-    padding: 16px 0 16px 16px;
+.container input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.container .checkbox-label {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 button {
@@ -88,12 +91,6 @@ button:hover {
     background-color: #003C43;
 }
 
-.product-show, tr, td, th {
-    border: 1px solid;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
 .credit {
     text-align: center;
     margin-top: 20px;
@@ -101,6 +98,21 @@ button:hover {
 }
 
 /* Results */
+
+.product-show, tr, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.container .error-no-info {
+    width: 50%;
+    color: red;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: #FFE4C9;
+    padding: 16px 0 16px 16px;
+}
 
 .container .return-prev {
     margin: 20px 0px;

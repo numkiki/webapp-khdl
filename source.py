@@ -10,8 +10,8 @@ def read_csv(file):
         products = list(reader)
     return products
 
-products = read_csv('data/New_data_cleaned.csv')
-comments = read_csv('data/final_sentiment_results.csv')
+products = read_csv('data/merged_final_df.csv')
+# comments = read_csv('data/final_sentiment_results.csv')
 
 # Route for the home page
 @app.route('/')
@@ -26,6 +26,7 @@ def search():
     storage = request.form.get('storage')
     min_price = request.form.get('min_price')
     max_price = request.form.get('max_price')
+    sort_order = request.form.get('sent-score')
     
     if not name or not min_price:
         error_message = "Please fill the name of the product and minimum price"
@@ -40,9 +41,8 @@ def search():
                 (max_price == "" or float(max_price) >= float(product['price']))
                ]
        
-    # if results == []:
-    #     error_message = "Please fill the name of the product"
-    #     return render_template('results.html', error_message=error_message)
+    if sort_order == 'ascending':  # If ascending order is selected
+        results.sort(key=lambda x: x['sentiment_score'])
     
     return render_template('results.html', results=results)
 
