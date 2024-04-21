@@ -34,14 +34,24 @@
                 <input type="text" name="max_price" placeholder="To">
             </div>
         </div>
-        
+
         <div class="sort-func">
-            <input type="checkbox" id="sent-score" name="sent-score" value="ascending">
-            <label for="sent-score" class="checkbox-label">Sort by Sentimental Score</label><br>
+            <input type="checkbox" name="sort-option" value="sorting">
+            <label for="dropdown" class="checkbox-label">Sort by:</label>
+
+            <select id="dropdown" value="select-val" name="value-type">
+                {% for option in options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select> 
         </div>
         <button type="submit">Search</button>
     </form>
 </div>
+
+<a href="/chat" class="chat-button">
+    <button type="submit">Chat with AI</button>   
+</a>
 
 {% if error_message %}
     <div class="error-msg">

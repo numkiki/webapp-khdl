@@ -34,11 +34,17 @@ input[type="text"] {
 }
 
 .container .search-item {
+    width: 100%;
     position: relative;
     margin-bottom: 20px;
 }
 
+.container .price-range {
+    width: 100%;
+}
+
 .container .price-range .search-item {
+    /* width: 50%; */
     display: inline-block;
     width: calc(50% - 2px);
 }
@@ -70,16 +76,25 @@ input[type="text"] {
     margin-left: 10px;
 }
 
+.container .sort-func {
+    align-self: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 button {
-    width: 10%;
+    width: 15%;
     padding: 10px 20px;
     background-color: #77B0AA;
     border-radius: 10px;
     color: #fff;
     border: none;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
     -webkit-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
@@ -87,7 +102,7 @@ button {
 }
 
 button:hover {
-    width: 15%;
+    width: 20%;
     background-color: #003C43;
 }
 
@@ -96,6 +111,15 @@ button:hover {
     margin-top: 20px;
     font-size: 20px;
 }
+
+.container .chat-button  {
+display: flex;
+justify-content: end;
+}
+/* 
+.container .chat-button > button {
+    
+} */
 
 /* Results */
 
@@ -130,4 +154,9 @@ button:hover {
 
 .container .item-nothing {
     text-align: center;
+}
+
+.container .item-show :last-child {
+    text-decoration: underline;
+    font-style: italic;
 }
